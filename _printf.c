@@ -44,11 +44,10 @@ int _printf(const char *format, ...)
 			{
 				_putchar('%');
 			}
-		_putchar(i);	
+		_putchar(format[i]);	
 		}
 	}
 	va_end(list);
-	_putchar('\n');
 	return (i);
 }
 
