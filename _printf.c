@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *
+ *_printf - describir funcion
  *
  */
 int _printf(const char *format, ...)
