@@ -15,6 +15,8 @@ int print_cp(va_list c);
 
 int print_int(va_list c);
 
+int _printf(const char *format, ...);
+
 /**
  *struct var_type - name of the struct
  *@type: type of the var
@@ -23,7 +25,7 @@ int print_int(va_list c);
 typedef struct var_type
 {
 	char type;
-	void (*func)(va_list);
+	int (*func)(va_list);
 } commands;
 
 #endif
