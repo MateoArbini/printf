@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, j = 0;
+	int i, j;
 
 	va_list list;
 
@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 		{'c', print_c},
 		{'i', print_int},
 		{'s', print_cp},
+		{'d', print_int},
 		{'\0', NULL}
 	};
 
@@ -25,7 +26,8 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == '%' && format[i + 1] != '%')
 			{
-				while (j != 4)
+				j = 0;
+				while (j != 5)
 				{
 					if (format[i + 1] == var_type[j].type)
 					{
@@ -35,19 +37,21 @@ int _printf(const char *format, ...)
 					}
 					else 
 					{
-						_putchar(i);
+						j++;
 					}
-					j++;
 				}
 			}
 			else if (format[i] == '%' && format[i + 1] == '%')
 			{
 				_putchar('%');
+				i++;
 			}
-		_putchar(format[i]);	
+			else
+			{
+				_putchar(format[i]);
+			}
 		}
 	}
 	va_end(list);
 	return (i);
 }
-
