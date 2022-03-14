@@ -26,7 +26,6 @@ int print_cp(va_list c)
 			_putchar(str[i]);
 			count++;
 		}
-		return (count);
 	}
 	else
 	{
