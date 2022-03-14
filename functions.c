@@ -33,6 +33,7 @@ int print_cp(va_list c)
 		{
 			_putchar(null[e]);
 		}
+			count = 6;
 	}
 	return (count);
 }
