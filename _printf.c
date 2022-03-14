@@ -2,7 +2,8 @@
 
 /**
  *_printf - describir funcion
- *
+ *@format: parameter given by the user
+ *Return: i
  */
 int _printf(const char *format, ...)
 {
