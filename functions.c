@@ -16,6 +16,8 @@ int print_cp(va_list c)
 	char *str = va_arg(c, char *);
 	int i;
 	int count = 0;
+	char *null = "(null)";
+	int e;
 
 	if (str != NULL)
 	{
@@ -28,7 +30,12 @@ int print_cp(va_list c)
 	}
 	else
 	{
-		return (0);
+		for (e = 0; null[e] != '\0'; e++)
+		{
+			_putchar(str[e]);
+
+		}
+		return (e);
 	}
 }
 
