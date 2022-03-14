@@ -64,7 +64,7 @@ int verifica(char c)
  */
 int _printf(const char *format, ...)
 {
-	int i = 0; int count = 0;
+	int i, int count = 0;
 	va_list list;
 
 	va_start(list, format);
@@ -88,7 +88,7 @@ int _printf(const char *format, ...)
 			else if (format[i] == '%' && format[i + 1] == '%')
 			{
 				_putchar('%');
-				i++; count++;
+				i++, count++;
 			}
 			else
 			{
