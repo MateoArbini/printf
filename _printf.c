@@ -17,10 +17,11 @@ int _printf(const char *format, ...)
 		{'s', print_cp},
 		{'d', print_int},
 		{'b', print_binary},
+		{'u', print_un},
 		{'\0', NULL}
 	};
 
-	va_start (list, format);
+	va_start(list, format);
 
 	if (format != NULL)
 	{
@@ -29,7 +30,7 @@ int _printf(const char *format, ...)
 			if (format[i] == '%' && format[i + 1] != '%')
 			{
 				j = 0;
-				while (j != 6)
+				while (j != 7)
 				{
 					if (format[i + 1] == var_type[j].type)
 					{
@@ -37,10 +38,8 @@ int _printf(const char *format, ...)
 						i++;
 						break;
 					}
-					else 
-					{
+					else
 						j++;
-					}
 				}
 			}
 			else if (format[i] == '%' && format[i + 1] == '%')
@@ -49,9 +48,7 @@ int _printf(const char *format, ...)
 				i++;
 			}
 			else
-			{
 				_putchar(format[i]);
-			}
 		}
 	}
 	va_end(list);
