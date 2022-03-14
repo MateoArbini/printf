@@ -17,6 +17,9 @@ int print_int(va_list c);
 
 int _printf(const char *format, ...);
 
+int print_int1(int n);
+
+int print_binary(va_list c);
 /**
  *struct var_type - name of the struct
  *@type: type of the var
