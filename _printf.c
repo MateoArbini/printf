@@ -93,10 +93,7 @@ int _printf(const char *format, ...)
 				count++;
 			}
 			else
-			{
-				_putchar(format[i]);
-				count++;
-			}
+				_putchar(format[i]), count++;
 		}
 	}
 	va_end(list);
