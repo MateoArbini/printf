@@ -64,12 +64,10 @@ int verifica(char c)
  */
 int _printf(const char *format, ...)
 {
-	int i;
-
+	int i = 0; int count = 0;
 	va_list list;
 
 	va_start(list, format);
-
 	if (format != NULL)
 	{
 		for (i = 0; format[i] != '\0'; i++)
@@ -78,21 +76,27 @@ int _printf(const char *format, ...)
 			{
 				if (verifica(format[i + 1]) == 1)
 				{
-					(*get_op_func(format[i + 1]))(list);
+					count += (*get_op_func(format[i + 1]))(list);
 					i++;
 				}
 				else
+				{
 					_putchar(format[i]);
+					count++;
+				}
 			}
 			else if (format[i] == '%' && format[i + 1] == '%')
 			{
 				_putchar('%');
-				i++;
+				i++; count++;
 			}
 			else
+			{
 				_putchar(format[i]);
+				count++;
+			}
 		}
 	}
 	va_end(list);
-	return (i);
+	return (count);
 }
