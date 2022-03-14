@@ -129,14 +129,21 @@ int print_rot13(va_list c)
 	
 	if (str != NULL)
 	{
-		for (i = 0; str[i] != '\0'; i++)
+		if (str[i] >= 0 && str[i] <= 9)
 		{
-			for (a = 0; a < 52; a++)
+			_putchar(str[i]);
+		}
+		else
+		{
+			for (i = 0; str[i] != '\0'; i++)
 			{
-				if (str[i] == or[a])
+				for (a = 0; a < 52; a++)
 				{
-					_putchar(new[a]);
-					break;
+					if (str[i] == or[a])
+					{
+						_putchar(new[a]);
+						break;
+					}
 				}
 			}
 		}
