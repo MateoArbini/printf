@@ -111,3 +111,33 @@ int print_un(va_list c)
 	return (count);
 }
 
+/**
+ *print_rot13 - traduce letras a rot13
+ *@c: string
+ *Return: i which is the counter of characters
+ **/
+int print_rot13(va_list c)
+{
+	int i = 0;
+	int a = 0;
+	char *str = va_arg(c, char *);
+	char *or;
+	char *new;
+
+	or = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	new = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		for (a = 0; a < 52; a++)
+		{
+			if (str[i] == or[a])
+			{
+				_putchar(new[a]);
+				break;
+			}
+		}
+	}
+	return (i);
+}
+
