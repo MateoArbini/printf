@@ -34,8 +34,8 @@ int print_cp(va_list c)
 		{
 			_putchar(null[e]);
 		}
-		return (count);
 	}
+	return (count);
 }
 
 /**
