@@ -126,18 +126,24 @@ int print_rot13(va_list c)
 
 	or = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	new = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
-	for (i = 0; str[i] != '\0'; i++)
+	
+	if (str != NULL)
 	{
-		for (a = 0; a < 52; a++)
+		for (i = 0; str[i] != '\0'; i++)
 		{
-			if (str[i] == or[a])
+			for (a = 0; a < 52; a++)
 			{
-				_putchar(new[a]);
-				break;
+				if (str[i] == or[a])
+				{
+					_putchar(new[a]);
+					break;
+				}
 			}
 		}
 	}
-	return (i);
+	else
+		return(i);
+
+	return(i);
 }
 
