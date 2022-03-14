@@ -1,15 +1,13 @@
 #include "main.h"
 
 /**
- *_printf - describir funcion
- *@format: parameter given by the user
- *Return: i
- */
-int _printf(const char *format, ...)
+ *get_op_func - function caller
+ *@s: format
+ *Return: pointer to function
+ **/
+int (*get_op_func(char s))(va_list)
 {
-	int i, j;
-
-	va_list list;
+	int iterarr = 0;
 
 	commands var_type[] = {
 		{'c', print_c},
@@ -18,8 +16,57 @@ int _printf(const char *format, ...)
 		{'d', print_int},
 		{'b', print_binary},
 		{'u', print_un},
-		{'\0', NULL}
+		{'\0', NULL},
 	};
+
+	while (iterarr != 6)
+	{
+		if (var_type[iterarr].type == s)
+		{
+			return (var_type[iterarr].func);
+		}
+		else
+		{
+			iterarr++;
+		}
+	}
+	return (NULL);
+}
+
+/**
+ *verifica - validates before running code
+ *@c: var type c
+ *Return: 1 if it calls a function, 0 otherwise
+ **/
+
+int verifica(char c)
+{
+	char *str = "cisdbu";
+	int t = 5;
+	int i = 0;
+
+	while (i <= t)
+	{
+		if (str[i] == c)
+		{
+			return (1);
+		}
+		i++;
+	}
+	return (0);
+}
+
+
+/**
+ *_printf - describir funcion
+ *@format: parameter given by the user
+ *Return: i
+ */
+int _printf(const char *format, ...)
+{
+	int i;
+
+	va_list list;
 
 	va_start(list, format);
 
@@ -29,18 +76,13 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == '%' && format[i + 1] != '%')
 			{
-				j = 0;
-				while (j != 7)
+				if (verifica(format[i + 1]) == 1)
 				{
-					if (format[i + 1] == var_type[j].type)
-					{
-						var_type[j].func(list);
-						i++;
-						break;
-					}
-					else
-						j++;
+					(*get_op_func(format[i + 1]))(list);
+					i++;
 				}
+				else
+					_putchar(format[i]);
 			}
 			else if (format[i] == '%' && format[i + 1] == '%')
 			{
