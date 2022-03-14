@@ -23,11 +23,10 @@ int print_cp(va_list c)
 	{
 		for (i = 0; str[i] != '\0'; i++)
 		{
-			_putchar(str[i]);
-			count++;
+			_putchar(str[i]), count++;
 		}
 	}
-	else
+	else if (str == NULL)
 	{
 		for (e = 0; null[e] != '\0'; e++)
 		{
