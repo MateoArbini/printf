@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{'i', print_int},
 		{'s', print_cp},
 		{'d', print_int},
+		{'b', print_binary},
 		{'\0', NULL}
 	};
 
@@ -27,7 +28,7 @@ int _printf(const char *format, ...)
 			if (format[i] == '%' && format[i + 1] != '%')
 			{
 				j = 0;
-				while (j != 5)
+				while (j != 6)
 				{
 					if (format[i + 1] == var_type[j].type)
 					{
