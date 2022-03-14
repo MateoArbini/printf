@@ -150,3 +150,36 @@ int print_int1 (int n)
         return (count);
 }
 
+/**
+ *
+ *
+ **/
+int print_un (va_list c)
+{
+	int count = 0;
+	int n = va_arg(c, int);
+	unsigned int dc, dig, nat = n;
+	double f = 1;
+
+	if (n == 0)
+	{
+		_putchar('0');
+	}
+	else
+	{
+		while (f <= nat)
+		{
+			f *= 10;
+		}
+		dc = f / 10;
+		while (dc >= 1)
+		{
+			dig = nat / dc;
+			_putchar(dig + '0');
+			nat = (nat - (dc * dig));
+			dc /= 10;
+			count++;
+		}
+	}
+	return (count);
+}	
