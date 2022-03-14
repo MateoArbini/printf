@@ -15,14 +15,16 @@ int print_cp(va_list c)
 {
 	char *str = va_arg(c, char *);
 	int i;
+	int count = 0;
 
 	if (str != NULL)
 	{
 		for (i = 0; str[i] != '\0'; i++)
 		{
 			_putchar(str[i]);
+			count++;
 		}
-		return (i);
+		return (count);
 	}
 	else
 	{
