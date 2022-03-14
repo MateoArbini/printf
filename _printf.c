@@ -75,9 +75,6 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == '%' && format[i + 1] != '%')
 			{
-				if (verifica(format[i + 1]) == '\0')
-					continue;
-
 				if (verifica(format[i + 1]) == 1)
 				{
 					count += (*get_op_func(format[i + 1]))(list);
