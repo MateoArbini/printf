@@ -14,7 +14,7 @@ int main(void)
 	unsigned int ui;
 	ui = (unsigned int)INT_MAX + 1024;
 
-    len = _printf("%s\n", NULL);
+    len = _printf("%R", "Hola");
     len2 = printf("6\n");
     _printf("Length:[%d, %i]\n", len, len2);
     printf("Length:[%d, %i]\n", len2, len2);
@@ -28,5 +28,6 @@ int main(void)
     printf("String:[%s]\n", "I am a string !");
     len = _printf("Percent:[%%]\n");
     len2 = printf("Percent:[%%]\n");
+
     return (0);
 }
