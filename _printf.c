@@ -89,6 +89,8 @@ int _printf(const char *format, ...)
 				_putchar(format[i]), count++;
 		}
 	}
+	else
+		return (0);
 	va_end(list);
 	return (count);
 }
