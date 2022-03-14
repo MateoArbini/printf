@@ -19,9 +19,9 @@ int _printf(const char *format, ...);
 
 int print_int1(int n);
 
-int print_binary(va_list c);
-
 int print_un(va_list c);
+
+int print_rot13(va_list c);
 
 /**
  *struct var_type - name of the struct
