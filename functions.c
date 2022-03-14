@@ -33,9 +33,9 @@ int print_cp(va_list c)
 		for (e = 0; null[e] != '\0'; e++)
 		{
 			_putchar(str[e]);
-
+			count++;
 		}
-		return (e);
+		return (count);
 	}
 }
 
