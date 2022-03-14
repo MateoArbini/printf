@@ -94,7 +94,7 @@ int _printf(const char *format, ...)
 		}
 	}
 	else
-		return (-1);
+		return ('\0');
 	va_end(list);
 	return (count);
 }
