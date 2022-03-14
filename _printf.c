@@ -73,7 +73,7 @@ int _printf(const char *format, ...)
 	{
 		for (i = 0; format[i] != '\0'; i++)
 		{
-			if (format[i] == '%' && format[i + 1] != '%')
+			if (format[i] == '%' && format[i + 1] != '%' && format[i + 1] != '\0')
 			{
 				if (verifica(format[i + 1]) == 1)
 				{
@@ -86,7 +86,9 @@ int _printf(const char *format, ...)
 			else if (format[i] == '%' && format[i + 1] == '%')
 				_putchar('%'), i++, count++;
 			else if (format[i] == '%' && format[i + 1] == '\0')
+			{
 				return (-1);
+			}
 			else
 				_putchar(format[i]), count++;
 		}
