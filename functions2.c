@@ -15,3 +15,25 @@ int print_c(va_list c)
 	_putchar(va_arg(c, int));
 	return (1);
 }
+
+/**
+ *
+ *
+ **/
+int print_rev(va_list c)
+{
+	int i = 0;
+	char *str;
+
+	str = va_arg(c, char *);
+
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	for (i = i - 1; i >= 0; i--)
+	{
+		_putchar(str[i]);
+	}
+	return (i);
+}
