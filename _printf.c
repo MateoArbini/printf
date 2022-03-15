@@ -17,10 +17,11 @@ int (*get_op_func(char s))(va_list)
 		{'u', print_un},
 		{'R', print_rot13},
 		{'r', print_rev},
+		{'b', print_binary}
 		{'\0', NULL},
 	};
 
-	while (iterarr != 8)
+	while (iterarr != 9)
 	{
 		if (var_type[iterarr].type == s)
 		{
@@ -42,8 +43,8 @@ int (*get_op_func(char s))(va_list)
 
 int verifica(char c)
 {
-	char *str = "cisduRr";
-	int t = 6;
+	char *str = "cisduRrb";
+	int t = 7;
 	int i = 0;
 
 	while (i <= t)
