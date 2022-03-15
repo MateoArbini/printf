@@ -29,6 +29,8 @@ void rec(unsigned int n);
 
 int print_binary(va_list c);
 
+int print_octal(va_list c);
+
 /**
  *struct var_type - name of the struct
  *@type: type of the var
