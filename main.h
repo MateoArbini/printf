@@ -31,6 +31,8 @@ int print_binary(va_list c);
 
 int print_octal(va_list c);
 
+void octal(unsigned int n);
+
 /**
  *struct var_type - name of the struct
  *@type: type of the var
