@@ -119,38 +119,22 @@ int print_un(va_list c)
 int print_rot13(va_list c)
 {
 	int i = 0;
-	int a = 0;
 	char *str = va_arg(c, char *);
-	char *or;
-	char *new;
 
-	or = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	new = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	
-	if (str != NULL)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] >= 0 && str[i] <= 9)
+		if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
 		{
-			_putchar(str[i]);
-		}
-		else
-		{
-			for (i = 0; str[i] != '\0'; i++)
+			if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'Z'))
 			{
-				for (a = 0; a < 52; a++)
-				{
-					if (str[i] == or[a])
-					{
-						_putchar(new[a]);
-						break;
-					}
-				}
+				_putchar(str[i + 13]);
+			}
+			else
+			{
+				_putchar(str[i - 13]);
 			}
 		}
+		_putchar(str[i]);
 	}
-	else
-		return(i);
-
-	return(i);
+	return (i);
 }
-
