@@ -6,17 +6,6 @@
 #include <math.h>
 #include <string.h>
 /**
- *print_c - function that prints a char
- *@c: alias of the list of parameters
- *Return: Always 1 because there´s always one char
- **/
-int print_c(va_list c)
-{
-	_putchar(va_arg(c, int));
-	return (1);
-}
-
-/**
 * print_rev - str
 *@ch: char
 *Return: lenght
@@ -81,6 +70,44 @@ int print_binary(va_list c)
 	for (y = 0; x / 2; y++)
 	{
 		x /= 2;
+	}
+	return (y + 1);
+}
+
+/**
+ *octal - function that gives you the octal number
+ *@n: given number by the user
+ **/
+void octal(unsigned int n)
+{
+	if (n / 8)
+	{
+		octal(n / 8);
+		_putchar(n % 8 + 48);
+	}
+	else
+	{
+		_putchar(n % 8 + 48);
+	}
+}
+
+/**
+ *print_octal - function that prints the octal number
+ *@c: alias of the list of parameters
+ *Return: y, which is the counter of chars
+ **/
+int print_octal(va_list c)
+{
+	unsigned int x;
+	int y;
+
+	x = va_arg(c, unsigned int);
+
+	octal(x);
+
+	for (y = 0; x / 8; y++)
+	{
+		x /= 8;
 	}
 	return (y + 1);
 }
