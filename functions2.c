@@ -19,7 +19,7 @@ int print_c(va_list c)
 /**
  *print_rev - function that prints a string reverse
  *@c: alias of the list of parameters
- *Return: i, which is the amount of chars
+ *Return: AUX, which is the amount of chars
  **/
 int print_rev(va_list c)
 {
@@ -36,7 +36,7 @@ int print_rev(va_list c)
 			i++;
 		}
 		AUX = i;
-		for (i = i - 1; i >= 0; i--)
+		for (i = i; i >= 0; i--)
 		{
 			_putchar (str[i]);
 		}
