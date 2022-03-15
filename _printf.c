@@ -17,7 +17,7 @@ int (*get_op_func(char s))(va_list)
 		{'u', print_un},
 		{'R', print_rot13},
 		{'r', print_rev},
-		{'b', print_binary}
+		{'b', print_binary},
 		{'\0', NULL},
 	};
 
