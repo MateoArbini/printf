@@ -17,8 +17,9 @@ int print_c(va_list c)
 }
 
 /**
- *
- *
+ *print_rev - function that prints a string reverse
+ *@c: alias of the list of parameters
+ *Return: i, which is the amount of chars
  **/
 int print_rev(va_list c)
 {
