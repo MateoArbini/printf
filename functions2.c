@@ -31,6 +31,10 @@ int print_rev(va_list c)
 
 	if (str != NULL)
 	{
+		if (str[o] == '\0')
+		{
+			return (0);
+		}
 		while (str[i] != '\0')
 		{
 			i++;
