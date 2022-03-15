@@ -25,6 +25,10 @@ int print_rot13(va_list c);
 
 int print_rev(va_list c);
 
+void rec(int n);
+
+int print_binary(va_list c);
+
 /**
  *struct var_type - name of the struct
  *@type: type of the var
