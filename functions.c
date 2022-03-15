@@ -119,7 +119,8 @@ int print_un(va_list c)
 int print_rot13(va_list c)
 {
 	int i = 0;
-	char *str = va_arg(c, char *);
+	char *str;
+	str = va_arg(c, char *);
 
 	while (str[i] != '\0')
 	{
@@ -127,11 +128,11 @@ int print_rot13(va_list c)
 		{
 			if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M'))
 			{
-				_putchar(str[i + 13]);
+				_putchar(str[i] + 13);
 			}
 			else
 			{
-				_putchar(str[i - 13]);
+				_putchar(str[i] - 13]);
 			}
 		}
 		else
