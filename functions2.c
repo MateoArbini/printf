@@ -47,3 +47,40 @@ int print_rev(va_list ch)
 	return (cont);
 }
 
+/**
+ *rec - function that gives you the binary number
+ *@n: given number by the user
+ **/
+void rec(int n)
+{
+	if (n / 2)
+	{
+		rec(n / 2);
+		_putchar(n % 2 + 48);
+	}
+	else
+	{
+		_putchar(n % + 48);
+	}
+}
+
+/**
+ *print_binary - function that prints the binary number
+ *@c: alias of the list of parameters
+ *Return: y, which is the counter of chars
+ **/
+int print_binary(va_list c)
+{
+	int x;
+	int y;
+
+	x = va_arg(c, int);
+
+	rec(x);
+
+	for (y = 0; x / 2; y++)
+	{
+		x /= 2;
+	}
+	return (y);
+}
