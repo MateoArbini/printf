@@ -1,0 +1,17 @@
+_printf man page
+
+Name:
+
+_printf();
+
+Return Value:
+
+If _printf is used correctly it should return the number of characters printed and the output dependes on the specifier used after the special character '%'
+
+The flag character:
+
+The character % followed bay the following characters makes the _printf function work in different ways, those flags are:
+
+s - The printf function will expect to receive a "string" and will return a string where the %s is located inside th function and the quantity of characters pritned.
+
+
