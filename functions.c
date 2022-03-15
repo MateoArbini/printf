@@ -132,7 +132,7 @@ int print_rot13(va_list c)
 			}
 			else
 			{
-				_putchar(str[i] - 13]);
+				_putchar(str[i] - 13);
 			}
 		}
 		else
