@@ -27,14 +27,20 @@ int print_rev(va_list c)
 	char *str;
 
 	str = va_arg(c, char *);
+	if (str != '\0')
+	{
+		while (str[i] != '\0')
+		{
+			i++;
+		}
+		for (i = i - 1; i >= 0; i--)
+		{
+			_putchar(str[i]);
+		}
+		return (i);
+	}
+	else
+		return (0);
 
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	for (i = i - 1; i >= 0; i--)
-	{
-		_putchar(str[i]);
-	}
 	return (i);
 }
