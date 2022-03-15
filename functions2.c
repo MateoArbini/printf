@@ -17,36 +17,33 @@ int print_c(va_list c)
 }
 
 /**
- *print_rev - function that prints a string reverse
- *@c: alias of the list of parameters
- *Return: AUX, which is the amount of chars
- **/
-int print_rev(va_list c)
+* print_rev - str
+*@ch: char
+*Return: lenght
+**/
+int print_rev(va_list ch)
 {
-	int AUX = 0;
-	int i = 0;
-	char *str;
+	char *cadena;
+	int i = 0, cont = 0;
 
-	str = va_arg(c, char *);
+	cadena = va_arg(ch, char*);
 
-	if (str != NULL)
+	if (cadena != NULL)
 	{
-		if (str[0] == '\0')
-		{
+		if (cadena[0] == '\0')
 			return (0);
-		}
-		while (str[i] != '\0')
-		{
+
+		while (cadena[i] != '\0')
 			i++;
-		}
-		AUX = i;
+
+		cont = i;
+
 		for (i = i; i >= 0; i--)
-		{
-			_putchar(str[i]);
-		}
+			_putchar (cadena[i]);
 	}
 	else
 		return (0);
-
-	return (AUX);
+	
+	return (cont);
 }
+
