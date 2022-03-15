@@ -37,6 +37,9 @@ void hexa(unsigned int n);
 
 int print_hexa(va_list c);
 
+int print_HEXA(va_list c);
+
+void HEXA(unsigned int n);
 /**
  *struct var_type - name of the struct
  *@type: type of the var
