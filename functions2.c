@@ -60,7 +60,7 @@ void rec(int n)
 	}
 	else
 	{
-		_putchar(n % + 48);
+		_putchar(n % 2 + 48);
 	}
 }
 
