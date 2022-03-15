@@ -123,8 +123,6 @@ int print_rot13(va_list c)
 
 	while (str[i] != '\0')
 	{
-	for (i = 0; str[i] != '\0'; i++)
-	{
 		if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
 		{
 			if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M'))
@@ -136,8 +134,11 @@ int print_rot13(va_list c)
 				_putchar(str[i - 13]);
 			}
 		}
-		_putchar(str[i]);
-	}
+		else
+		{
+			_putchar(str[i]);
+		}
+		i++;
 	}
 	return (i);
 }
