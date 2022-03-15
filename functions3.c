@@ -27,7 +27,7 @@ void rec_hexa(unsigned int num)
 	}
 	else
 	{
-		if (num % 16 > 9 && num % 16 <= 16)
+		if (num % 16 > 9 && num % 16 < 16)
 		{
 			dif = (num % 16) - 9;
 			_putchar(dif + '@');
