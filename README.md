@@ -34,6 +34,8 @@ int  _printf(const  char *format, ...);
 |   %d && %i | Signed Decimal Integer   |   101 |
 | %  | Print a % when we find %% inside the printf function       | %      |
 | %r   | rot13 Hello World!  | Uryyb Jbeyq!    |
+|%r      |Receives a string and return it in reverse Ex: Hello World! |!dlroW olleH|
+
 
 ## Authors
 
