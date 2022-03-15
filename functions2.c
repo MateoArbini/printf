@@ -51,7 +51,7 @@ int print_rev(va_list ch)
  *rec - function that gives you the binary number
  *@n: given number by the user
  **/
-void rec(int n)
+void rec(unsigned int n)
 {
 	if (n / 2)
 	{
@@ -71,10 +71,10 @@ void rec(int n)
  **/
 int print_binary(va_list c)
 {
-	int x;
+	unsigned int x;
 	int y;
 
-	x = va_arg(c, int);
+	x = va_arg(c, unsigned int);
 
 	rec(x);
 
