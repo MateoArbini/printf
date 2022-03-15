@@ -38,8 +38,8 @@ int print_rev(va_list c)
 		AUX = i;
 		for (i = i - 1; i >= 0; i--)
 		{
-			_putchar(str[i]);
-		}	
+			_putchar (str[i]);
+		}
 	}
 	else
 		return (0);
