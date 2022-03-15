@@ -43,7 +43,7 @@ int print_rev(va_list ch)
 	}
 	else
 		return (0);
-	
+
 	return (cont);
 }
 
