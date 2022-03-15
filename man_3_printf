@@ -1,0 +1,48 @@
+NAME
+	_printf
+
+SYNOPSIS
+
+	#include "main.h"
+	int _printf(char *format, ...)
+
+DESCRIPTION
+
+	The function _printf() is a variadic function that gives an output according
+	to the specifier the user uses.
+	This function writes the output to standard output.
+	Depending on the specifier used the output wont work the user should use specifier that matches with what the function
+	is receiving as input.
+	If the _printf function works as planned it should return the expected output.
+
+SPECIFIERS
+	
+	Specifiers are the character followed after the % character, it specifiers the type of
+	conversion to be applied.
+	Those specifiers are:
+
+	%	Used to print a single % as the output.
+
+	d, i 	Prints and int and a unsigned int as output.
+
+	b	As input it expects a int and it should return the exact value of int as binary.
+
+	c     	Prints a char as output.
+
+	s      	Receives a char * as input and prints the array of characters pointed by the pointer.
+
+	o	Receives a integer and and return it as octal.
+
+	u	Prints a unsigned integer.
+
+	x	Prints hexadecimal in lowercase.
+
+	X	Prints hexadecimal in uppercase.
+
+	r	Expects a char * and return it in reverse.
+
+	R (ROT-13)
+		Expects a char * and returns it encrypted with ROT-13
+RETURN VALUE
+
+	On success the function should return the number os character printed execpt the NULL byte
