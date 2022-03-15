@@ -41,6 +41,9 @@ int print_octal(va_list c);
 |%b         |Receives an integer and return it in binary Ex: 98           |1100010           | 
 |%o      |Receives a interger and return it in octal Ex: 98 |142|
 
+## Flow Chart
+
+<img src ="https://user-images.githubusercontent.com/98341381/158456939-d5f7e715-609a-4dc0-af90-3462f282eb71.png">
 
 ## Authors
 
