@@ -127,7 +127,7 @@ int print_rot13(va_list c)
 	{
 		if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
 		{
-			if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'Z'))
+			if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M'))
 			{
 				_putchar(str[i + 13]);
 			}
@@ -138,7 +138,6 @@ int print_rot13(va_list c)
 		}
 		_putchar(str[i]);
 	}
-	i++:
 	}
 	return (i);
 }
