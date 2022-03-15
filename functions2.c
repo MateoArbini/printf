@@ -82,5 +82,5 @@ int print_binary(va_list c)
 	{
 		x /= 2;
 	}
-	return (y);
+	return (y + 1);
 }
