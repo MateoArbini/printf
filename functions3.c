@@ -53,7 +53,7 @@ int print_hexa(va_list c)
 
 	rec_hexa(iter);
 
-	for (num = 0; num / 16; num++)
+	for (num = 0; iter / 16; num++)
 	{
 		iter = iter / 16;
 	}
