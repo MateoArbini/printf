@@ -121,6 +121,8 @@ int print_rot13(va_list c)
 	int i = 0;
 	char *str = va_arg(c, char *);
 
+	while (str[i] != '\0')
+	{
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
@@ -135,6 +137,7 @@ int print_rot13(va_list c)
 			}
 		}
 		_putchar(str[i]);
+	}
 	}
 	return (i);
 }
