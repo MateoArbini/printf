@@ -27,6 +27,7 @@ int print_rev(va_list c)
 	char *str;
 
 	str = va_arg(c, char *);
+
 	if (str != '\0')
 	{
 		while (str[i] != '\0')
