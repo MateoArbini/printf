@@ -23,6 +23,7 @@ int print_c(va_list c)
  **/
 int print_rev(va_list c)
 {
+	int AUX = 0;
 	int i = 0;
 	char *str;
 
@@ -34,6 +35,7 @@ int print_rev(va_list c)
 		{
 			i++;
 		}
+		AUX = i;
 		for (i = i - 1; i >= 0; i--)
 		{
 			_putchar(str[i]);
@@ -42,5 +44,5 @@ int print_rev(va_list c)
 	else
 		return (0);
 
-	return (i);
+	return (AUX);
 }
