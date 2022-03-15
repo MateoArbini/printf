@@ -1,3 +1,11 @@
+#include "main.h"
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+#include <math.h>
+#include <string.h>
+
 /**
  *rec_hexa - function that gives you the hexa number
  *@num: user given number
@@ -8,7 +16,7 @@ void rec_hexa(unsigned int num)
 
 	if (num / 16)
 	{
-		rec_oct(num / 16);
+		rec_hexa(num / 16);
 		if (num % 16 > 9 && num % 16 <= 16)
 		{
 			dif = (num % 16) - 9;
@@ -38,14 +46,16 @@ void rec_hexa(unsigned int num)
 
 int print_hexa(va_list c)
 {
-	int iter;
+	int num;
+	unsigned int iter;
 
-	iter = va_arg(c, int);
+	iter = va_arg(c, unsigned int);
 
-	rec_oct(num);
-	for (iter = 0; num / 16; iter++)
+	rec_hexa(iter);
+
+	for (num = 0; num / 16; num++)
 	{
-		num = num / 16;
+		iter = iter / 16;
 	}
-	return (iter + 1);
+	return (num + 1);
 }
