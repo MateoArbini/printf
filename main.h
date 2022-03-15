@@ -25,7 +25,7 @@ int print_rot13(va_list c);
 
 int print_rev(va_list c);
 
-void rec(int n);
+void rec(unsigned int n);
 
 int print_binary(va_list c);
 
