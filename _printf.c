@@ -20,10 +20,11 @@ int (*get_op_func(char s))(va_list)
 		{'b', print_binary},
 		{'o', print_octal},
 		{'x', print_hexa},
+		{'X', print_HEXA},
 		{'\0', NULL},
 	};
 
-	while (iterarr != 11)
+	while (iterarr != 12)
 	{
 		if (var_type[iterarr].type == s)
 		{
@@ -45,8 +46,8 @@ int (*get_op_func(char s))(va_list)
 
 int verifica(char c)
 {
-	char *str = "cisduRrbox";
-	int t = 9;
+	char *str = "cisduRrboxX";
+	int t = 10;
 	int i = 0;
 
 	while (i <= t)
