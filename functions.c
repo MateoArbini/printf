@@ -138,6 +138,7 @@ int print_rot13(va_list c)
 		}
 		_putchar(str[i]);
 	}
+	i++:
 	}
 	return (i);
 }
