@@ -120,6 +120,7 @@ int print_rot13(va_list c)
 {
 	int i = 0;
 	char *str;
+
 	str = va_arg(c, char *);
 
 	while (str[i] != '\0')
