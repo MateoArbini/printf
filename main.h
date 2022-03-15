@@ -33,6 +33,10 @@ int print_octal(va_list c);
 
 void octal(unsigned int n);
 
+void hexa(unsigned int n);
+
+int print_hexa(va_list c);
+
 /**
  *struct var_type - name of the struct
  *@type: type of the var
