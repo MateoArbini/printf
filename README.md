@@ -38,6 +38,8 @@ int print_octal(va_list c);
 | %  | Print a % when we find %% inside the printf function       | %      |
 | %R   | rot13 Hello World!  | Uryyb Jbeyq!    |
 |%r      |Receives a string and return it in reverse Ex: Hello World! |!dlroW olleH|
+|%b         |Receives an integer and return it in binary Ex: 98           |1100010           | 
+|%o      |Receives a interger and return it in octal Ex: 98 |142|
 
 
 ## Authors
