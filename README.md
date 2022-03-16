@@ -40,6 +40,8 @@ int print_octal(va_list c);
 |%r      |Receives a string and return it in reverse Ex: Hello World! |!dlroW olleH|
 |%b         |Receives an integer and return it in binary Ex: 98           |1100010           | 
 |%o      |Receives a interger and return it in octal Ex: 98 |142|
+| %x   | Prints Hexadecimal in lower case 123456  | 1e240    |
+| %X  | Prints Hexadecimal in upper case 123456 | 1E240    |
 
 ## Flow Chart
 
